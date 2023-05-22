@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     //Private Variables
     private float _speed = 10.0f;
     private float _rotateSpeed = 15.0f;
-    private float _horizontalOffset;
-    private float _verticalOffset;
+    private float _horizontalOffset = 0.0f;
+    private float _verticalOffset = 0.0f;
 
     void Start()
     {
@@ -18,8 +19,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        _horizontalOffset = Input.GetAxis("Horizontal");
-        _verticalOffset = Input.GetAxis("Vertical");
+        _horizontalOffset = Input.GetAxis("Horizontal_2");
+        _verticalOffset = Input.GetAxis("Vertical_2");
 
         //Vehicle goes forward and backward
         transform.Translate(Vector3.forward * Time.deltaTime * _speed * _verticalOffset);

@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+public class FollowPlayer2 : MonoBehaviour
 {
     //Private Variable
     private Vector3 _offset1 = new Vector3(0, 7.75f, -10.25f);
@@ -16,11 +14,11 @@ public class FollowPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             _counter++;
             Debug.Log(_counter);
-            
+
             if (_counter >= 2.0f)
             {
                 _counter = 0.0f;
