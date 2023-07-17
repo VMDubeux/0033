@@ -7,8 +7,8 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     //Private Variable
-    private Vector3 _offset1 = new Vector3(0, 7.75f, -10.25f);
-    private Vector3 _offset2 = new Vector3(0, 4.25f, 1.0f);
+    [SerializeField] private Vector3 _offset1 = new (0, 7.75f, -10.25f);
+    [SerializeField] private Vector3 _offset2 = new (0, 4.25f, 1.0f);
     private float _counter = 0.0f;
 
     [Header("GameObject:")]

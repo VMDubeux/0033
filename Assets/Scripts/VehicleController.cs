@@ -5,10 +5,10 @@ using UnityEngine.UIElements;
 
 public class VehicleController : MonoBehaviour
 {
-    public float VehicleSpeed = 20.0f;
+    private const float _vehicleSpeed = 10.0f;
         
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * VehicleSpeed);
+        transform.Translate(Time.fixedDeltaTime * _vehicleSpeed * Vector3.forward);
     }
 }
